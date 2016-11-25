@@ -3,7 +3,7 @@
 Plugin Name: Export Import 99%
 Plugin URI: https://www.motivar.io
 Description: Json Export-Import great for transfers
-Version: 0.2
+Version: 0.2.1
 Author: Anastasiou K., Giannopoulos N.
 Author URI: https://motivar.io
 */
@@ -202,7 +202,7 @@ function export_import_99_json_export()
                 {
                     $data = file_get_contents($_FILES['import_file']['tmp_name']);
                     $data= json_decode($data, true);
-                    if (!empty($data['terms']) && !empty($data['posts']))
+                    if (!(empty($data['terms']) && empty($data['posts'])))
                     {
                         $user_id = get_current_user_id();
                         if (!empty($data['terms']) && $replace_terms==1)
