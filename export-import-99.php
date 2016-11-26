@@ -6,6 +6,8 @@ Description: Json Export-Import great for transfers
 Version: 0.2.1
 Author: Anastasiou K., Giannopoulos N.
 Author URI: https://motivar.io
+GitHub Plugin URI: https://github.com/Motivar/export_import_99_all
+GitHub Branch:     master
 */
 
 
@@ -166,7 +168,8 @@ function export_import_99_json_export()
                 }
             }
             else
-            {global $wpdb;
+            {
+                global $wpdb;
                 $error=0;
                 $inserted=0;
                 $rejected=0;
@@ -296,7 +299,7 @@ function export_import_99_json_export()
                                     $changed_posts++;
                                     update_post_meta($new_id,'e_x_99_old_id',$kk);
                                     /*replace term*/
-                                    if ($replace_meta!=0 && !empty($v['metas']))
+                                       if ($replace_meta!=0 && !empty($v['metas']))
                                         {
                                             foreach($v['metas'] as $m)
                                                 {
@@ -307,6 +310,7 @@ function export_import_99_json_export()
                                                 }
                                         }
                                     /*add terms*/
+
                                     if (!empty($vv['terms']))
                                         {
                                             foreach ($vv['terms'] as $tk=>$tv)
