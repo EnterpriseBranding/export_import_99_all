@@ -3,9 +3,10 @@
 Plugin Name: Export Import 99%
 Plugin URI: https://www.motivar.io
 Description: Json Export-Import great for transfers
-Version: 0.2.1
+Version: 0.2.2
 Author: Anastasiou K., Giannopoulos N.
 Author URI: https://motivar.io
+Text Domain:       github-updater
 GitHub Plugin URI: https://github.com/Motivar/export_import_99_all
 GitHub Branch:     master
 */
